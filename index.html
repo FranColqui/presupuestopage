@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memoria Descriptiva — Planta Baja</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="room-definitions.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-left">
+      <span class="header-tag">MEMORIA DESCRIPTIVA</span>
+      <h1 class="header-title">Planta Baja</h1>
+      <p class="header-instruction">Seleccionar habitación para ver plan de trabajo</p>
+    </div>
+    <div class="header-right">
+      <a href="Presupuesto final.pdf" target="_blank" class="budget-button">
+        <span class="budget-button-text">Ir a Presupuesto</span>
+      </a>
+      <span class="header-meta">Palpalá · Jujuy · Argentina</span>
+      <span class="header-meta dim">Superficie total: 11.79 × 8.73 m</span>
+    </div>
+  </header>
+
+
+  <!-- FLOOR PLAN CONTAINER -->
+  <main class="plan-wrapper">
+    <div class="plan-container" id="planContainer">
+      <img
+        src="Planta definitiva.png"
+        alt="Plano Planta Baja"
+        class="plan-image"
+        id="planImage"
+        draggable="false"
+        loading="lazy"
+        srcset="Planta definitiva.png 1x, Planta definitiva.png 2x"
+        decoding="async"
+      />
+
+      <!-- BOTONES TRANSPARENTES SOBRE CADA HABITACION -->
+      <!-- Posiciones en % relativas al contenedor: left, top, width, height -->
+
+      <button class="room-btn" data-room="dormitorio1">
+        <span class="room-label">Dormitorio 1</span>
+      </button>
+
+      <button class="room-btn" data-room="dormitorio2">
+        <span class="room-label">Dormitorio 2</span>
+      </button>
+
+      <button class="room-btn" data-room="dormitorio3">
+        <span class="room-label">Dormitorio 3</span>
+      </button>
+
+      <button class="room-btn" data-room="bano">
+        <span class="room-label">Baño</span>
+      </button>
+
+      <button class="room-btn" data-room="living">
+        <span class="room-label">Living</span>
+      </button>
+
+      <button class="room-btn" data-room="comedor">
+        <span class="room-label">Comedor</span>
+      </button>
+
+      <button class="room-btn" data-room="cocina">
+        <span class="room-label">Cocina</span>
+      </button>
+
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-tag" id="modalTag">ESPACIO</span>
+          <h2 class="modal-title" id="modalTitle">Nombre del espacio</h2>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-divider"></div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Contenido dinámico -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-print" id="btnPrint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          Imprimir / Exportar PDF
+        </button>
+        <button class="btn-renders" id="btnRenders">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          Ver Renders
+        </button>
+        <span class="modal-footer-note">Use "Guardar como PDF" en el diálogo de impresión</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRINT ZONE (invisible, solo para imprimir) -->
+  <div id="printZone" class="print-zone"></div>
+
+  <!-- GALERIA MODAL -->
+  <div class="gallery-overlay" id="galleryOverlay" role="dialog" aria-modal="true">
+    <div class="gallery-container">
+
+      <!-- Header -->
+      <div class="gallery-header">
+        <div class="gallery-title-area">
+          <span class="gallery-tag" id="galleryTag">RENDERS</span>
+          <span class="gallery-title" id="galleryRoomTitle">Espacio</span>
+        </div>
+        <button class="gallery-close" id="galleryClose" aria-label="Cerrar galería">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Imagen principal -->
+      <div class="gallery-main">
+        <img class="gallery-image" id="galleryImage" src="" alt="Render" />
+        <button class="gallery-nav gallery-prev" id="galleryPrev" aria-label="Imagen anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="gallery-nav gallery-next" id="galleryNext" aria-label="Siguiente imagen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="gallery-footer">
+        <div class="gallery-dots" id="galleryDots"></div>
+        <span class="gallery-counter" id="galleryCounter">1 / 3</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="image-responsive-config.js"></script>
+</body>
+</html>

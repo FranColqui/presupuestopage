@@ -1,0 +1,464 @@
+/* ============================================================
+   ROOM POSITION DEFINITIONS
+   ============================================================
+   
+   Este archivo contiene TODAS las definiciones de posición,
+   tamaño y ubicación de los botones de habitaciones.
+   
+   Estructura: --room[nombre]--[propiedad]
+   Propiedades: left, top, width, height
+   
+   Todos los valores están en porcentajes (%) relativo al
+   contenedor del plano. 
+   
+   ¡AQUÍ es donde haces los ajustes manuales!
+   
+   Unidades: % (porcentaje relativo al ancho/alto del plano)
+   ============================================================ */
+
+:root {
+  
+  /* ========================================================
+     DORMITORIO 1 (Izquierda arriba)
+     ======================================================== */
+  --room-dormitorio1-left: 22%;
+  --room-dormitorio1-top: 11.5%;
+  --room-dormitorio1-width: 13%;
+  --room-dormitorio1-height: 28.5%;
+  
+  /* ========================================================
+     DORMITORIO 2 (Centro arriba)
+     ======================================================== */
+  --room-dormitorio2-left: 35.5%;
+  --room-dormitorio2-top: 11.5%;
+  --room-dormitorio2-width: 12.3%;
+  --room-dormitorio2-height: 28.5%;
+  
+  /* ========================================================
+     DORMITORIO 3 (Centro-derecha arriba)
+     ======================================================== */
+  --room-dormitorio3-left: 49%;
+  --room-dormitorio3-top: 11.5%;
+  --room-dormitorio3-width: 15%;
+  --room-dormitorio3-height: 28.5%;
+  
+  /* ========================================================
+     BAÑO (Centro-derecha medio)
+     ======================================================== */
+  --room-bano-left: 54%;
+  --room-bano-top: 40.7%;
+  --room-bano-width: 10%;
+  --room-bano-height: 11.5%;
+  
+  /* ========================================================
+     LIVING (Derecha completo)
+     ======================================================== */
+  --room-living-left: 65.7%;
+  --room-living-top: 11.5%;
+  --room-living-width: 14.2%;
+  --room-living-height: 77.5%;
+  
+  /* ========================================================
+     COMEDOR (Izquierda abajo)
+     ======================================================== */
+  --room-comedor-left: 22%;
+  --room-comedor-top: 55%;
+  --room-comedor-width: 32%;
+  --room-comedor-height: 33%;
+  
+  /* ========================================================
+     COCINA (Centro-izquierda abajo)
+     ======================================================== */
+  --room-cocina-left: 54%;
+  --room-cocina-top: 55%;
+  --room-cocina-width: 10%;
+  --room-cocina-height: 33%;
+  
+  /* ============================================================
+     PLAN WRAPPER - CONTROL DE ESPACIADO
+     ============================================================
+     Ajusta estos valores para mover la imagen del plano
+     ======================================================== */
+  --plan-wrapper-padding-top: 0.4rem;    /* Espacio arriba del plano */
+  --plan-wrapper-padding-right: 3.5rem;  /* Espacio derecha */
+  --plan-wrapper-padding-bottom: 4rem;   /* Espacio abajo del plano */
+  --plan-wrapper-padding-left: 3.5rem;   /* Espacio izquierda */
+  
+}
+
+/* ============================================================
+   APLICACIÓN DE VARIABLES A CADA BOTÓN
+   ============================================================
+   
+   Estas reglas CSS aplican las variables definidas arriba
+   a cada botón individual.
+   
+   ============================================================ */
+
+[data-room="dormitorio1"] {
+  left: var(--room-dormitorio1-left) !important;
+  top: var(--room-dormitorio1-top) !important;
+  width: var(--room-dormitorio1-width) !important;
+  height: var(--room-dormitorio1-height) !important;
+}
+
+[data-room="dormitorio2"] {
+  left: var(--room-dormitorio2-left) !important;
+  top: var(--room-dormitorio2-top) !important;
+  width: var(--room-dormitorio2-width) !important;
+  height: var(--room-dormitorio2-height) !important;
+}
+
+[data-room="dormitorio3"] {
+  left: var(--room-dormitorio3-left) !important;
+  top: var(--room-dormitorio3-top) !important;
+  width: var(--room-dormitorio3-width) !important;
+  height: var(--room-dormitorio3-height) !important;
+}
+
+[data-room="bano"] {
+  left: var(--room-bano-left) !important;
+  top: var(--room-bano-top) !important;
+  width: var(--room-bano-width) !important;
+  height: var(--room-bano-height) !important;
+}
+
+[data-room="living"] {
+  left: var(--room-living-left) !important;
+  top: var(--room-living-top) !important;
+  width: var(--room-living-width) !important;
+  height: var(--room-living-height) !important;
+}
+
+[data-room="comedor"] {
+  left: var(--room-comedor-left) !important;
+  top: var(--room-comedor-top) !important;
+  width: var(--room-comedor-width) !important;
+  height: var(--room-comedor-height) !important;
+}
+
+[data-room="cocina"] {
+  left: var(--room-cocina-left) !important;
+  top: var(--room-cocina-top) !important;
+  width: var(--room-cocina-width) !important;
+  height: var(--room-cocina-height) !important;
+}
+
+/* ============================================================
+   HEADER INSTRUCTION STYLES
+   ============================================================ */
+
+.header-instruction {
+  font-family: var(--font-sans);
+    font-size: 0.75rem;
+  margin: 0.5rem 0 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   BUDGET BUTTON STYLES
+   ============================================================ */
+
+.budget-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--gold);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  border: 1.5px solid var(--gold);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.budget-button:hover {
+  background-color: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.25);
+}
+
+.budget-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.15);
+}
+
+.budget-button-text {
+  display: block;
+}
+
+/* ============================================================
+   RENDERS BUTTON STYLES
+   ============================================================ */
+
+.btn-renders {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--rule);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-renders:hover {
+  background-color: var(--paper-warm);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.15);
+}
+
+.btn-renders:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.1);
+}
+
+/* ============================================================
+   GALERÍA MODAL STYLES — integrada al sistema de diseño
+   ============================================================ */
+
+.gallery-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 24, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.gallery-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  /* Marco estilo papel */
+  background: var(--paper-cool);
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow-heavy);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  /* Línea dorada superior */
+  position: relative;
+}
+
+.gallery-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  z-index: 1;
+}
+
+/* Cabecera de la galería */
+.gallery-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.75rem 1rem;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.gallery-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.gallery-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.gallery-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1;
+}
+
+/* Área principal de imagen */
+.gallery-main {
+  position: relative;
+  width: 100%;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  max-height: 55vh;
+  overflow: hidden;
+}
+
+.gallery-image {
+  max-width: 100%;
+  max-height: 55vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  animation: galleryFadeIn 0.25s ease;
+}
+
+@keyframes galleryFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Botones de navegación sobre la imagen */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(245, 243, 238, 0.15);
+  border: 1px solid rgba(245, 243, 238, 0.3);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--paper);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.gallery-nav:hover {
+  background: rgba(184, 134, 11, 0.35);
+  border-color: var(--gold);
+  color: var(--paper);
+}
+
+.gallery-prev { left: 1rem; }
+.gallery-next { right: 1rem; }
+
+/* Footer de la galería */
+.gallery-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.75rem;
+  border-top: 1px solid var(--rule-light);
+}
+
+.gallery-counter {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-dim);
+}
+
+/* Botón cerrar */
+.gallery-close {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink-dim);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.gallery-close svg { width: 14px; height: 14px; }
+
+.gallery-close:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--paper-warm);
+}
+
+/* Miniaturas / indicadores de punto */
+.gallery-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.gallery-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rule);
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.gallery-dot.active {
+  background: var(--gold);
+  transform: scale(1.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-overlay { padding: 1rem; }
+
+  .gallery-main {
+    min-height: 250px;
+    max-height: 45vh;
+  }
+
+  .gallery-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gallery-prev { left: 0.5rem; }
+  .gallery-next { right: 0.5rem; }
+
+  .gallery-header { padding: 1rem 1.25rem 0.75rem; }
+  .gallery-footer { padding: 0.75rem 1.25rem; }
+}
