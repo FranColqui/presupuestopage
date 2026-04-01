@@ -21,15 +21,15 @@
   /* ========================================================
      DORMITORIO 1 (Izquierda arriba)
      ======================================================== */
-  --room-dormitorio1-left: 22%;
-  --room-dormitorio1-top: 20%;
-  --room-dormitorio1-width: 13%;
+  --room-dormitorio1-left: 12%;
+  --room-dormitorio1-top: 11.5%;
+  --room-dormitorio1-width: 18%;
   --room-dormitorio1-height: 28.5%;
   
   /* ========================================================
      DORMITORIO 2 (Centro arriba)
      ======================================================== */
-  --room-dormitorio2-left: 35.5%;
+  --room-dormitorio2-left: 33.5%;
   --room-dormitorio2-top: 11.5%;
   --room-dormitorio2-width: 12.3%;
   --room-dormitorio2-height: 28.5%;
@@ -39,7 +39,7 @@
      ======================================================== */
   --room-dormitorio3-left: 49%;
   --room-dormitorio3-top: 11.5%;
-  --room-dormitorio3-width: 15%;
+  --room-dormitorio3-width: 17%;
   --room-dormitorio3-height: 28.5%;
   
   /* ========================================================
@@ -53,15 +53,15 @@
   /* ========================================================
      LIVING (Derecha completo)
      ======================================================== */
-  --room-living-left: 90%;
+  --room-living-left: 70%;
   --room-living-top: 11.5%;
-  --room-living-width: 14.2%;
+  --room-living-width: 16%;
   --room-living-height: 77.5%;
   
   /* ========================================================
      COMEDOR (Izquierda abajo)
      ======================================================== */
-  --room-comedor-left: 22%;
+  --room-comedor-left: 12%;
   --room-comedor-top: 55%;
   --room-comedor-width: 32%;
   --room-comedor-height: 33%;
@@ -69,9 +69,9 @@
   /* ========================================================
      COCINA (Centro-izquierda abajo)
      ======================================================== */
-  --room-cocina-left: 54%;
+  --room-cocina-left: 55%;
   --room-cocina-top: 55%;
-  --room-cocina-width: 10%;
+  --room-cocina-width: 12%;
   --room-cocina-height: 33%;
   
   /* ============================================================
