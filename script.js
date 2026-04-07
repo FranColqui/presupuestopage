@@ -198,6 +198,8 @@ const rooms = {
         <li>Instalación de cañerías</li>
         <li>Colocación de revestimiento cerámico en paredes</li>
         <li>Colocación de piso (material a definir)</li>
+        <li>Colocación de extractor aereo (a definir)</li>
+        <li>Colocación de cielo razo telgopor(a definir)</li>
         <li>Instalación de artefactos sanitarios (inodoro, lavamano) y grifería</li>
         <li>Recableado/canaleteado eléctrico</li>
         <li>Instalación de tomacorrientes y portalamparas (1)</li>
